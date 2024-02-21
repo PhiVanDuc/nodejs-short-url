@@ -1,0 +1,27 @@
+<% if (!logged) { %>
+    <form action="/<%= list.custom_path %>" method="post" style="width: 500px;">
+        <label class="fw-medium mb-2" style="font-size: 15px;">Vui lòng nhập mật khẩu để mở liên kết</label>
+        <input type="password" name="password" placeholder="Mật khẩu" class="form-control w-100" style="font-size: 14px;">
+
+        <% if (errors.password) { %>
+            <span class="d-inline-block mt-2 text-danger" style="font-size: 14px;"><%= errors.password %></span>
+        <% } %>
+
+        <button type="submit" class="btn btn-primary w-100 mt-3">Mở liên kết</button>
+    </form>
+<% } else { %>
+    <input type="checkbox" id="toggle-qr" hidden>
+
+    <div style="width: 500px;">
+        <a href="<%= list.root_url %>" class="btn btn-primary w-100 mb-3">Nhấn vào đây để tiếp tục</a>
+        <button class="table-button-share btn btn-primary w-100 mb-3" data-short-url="<%= list.root_url %>">Chia sẻ lên Facebook</button>
+        <label for="toggle-qr" class="btn btn-light w-100">Gửi tới điện thoại (QR code)</label>
+    </div>
+
+    <div class="wrap-qr">
+        <label for="toggle-qr" class="overlay"></label>
+        <img src="<%= qrCodeUrl %>" alt="QR Code">
+    </div>
+
+    <script src="/javascripts/popup.js"></script>
+<% } %>

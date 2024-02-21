@@ -1,0 +1,83 @@
+.table-bordered th,
+.table-bordered td,
+.table thead,
+.table tbody {
+    border: 2px solid white;
+}
+
+.table-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 26px;
+    height: 26px;
+    transition: transform 0.2s linear;
+}
+
+.table-button:hover {
+    transform: translateY(-3px);
+}
+
+/* width */
+.wrap-table::-webkit-scrollbar {
+    width: 200px;
+    height: 8px;
+}
+
+/* Track */
+.wrap-table::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+/* Handle */
+.wrap-table::-webkit-scrollbar-thumb {
+    background: rgb(217,217,217); 
+    border-radius: 99px;
+}
+
+/* Handle on hover */
+.wrap-table::-webkit-scrollbar-thumb:hover {
+    background: #a6a6a6; 
+}
+
+tr td {
+    transition: background-color 0.3s linear;
+}
+
+tr:hover td {
+    background-color: #F7F9FC;
+}
+
+/* width */
+td::-webkit-scrollbar {
+    width: 200px;
+    height: 8px;
+}
+
+/* Track */
+td::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+/* Handle */
+td::-webkit-scrollbar-thumb {
+    background: rgb(217,217,217); 
+    border-radius: 99px;
+}
+
+/* Handle on hover */
+td::-webkit-scrollbar-thumb:hover {
+    background: #a6a6a6; 
+}
+
+a {
+    color: black;
+    transition: color 0.3s linear;
+}
+
+a:hover {
+    color: rgb(12,110,253);
+}
